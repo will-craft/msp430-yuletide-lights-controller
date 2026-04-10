@@ -1,4 +1,4 @@
-# MSP430 Christmas Light Controller
+# MSP430 Yuletide Lights Controller
 
 Firmware in C for the MSP430G2553 microcontroller implementing a timed LED effects controller with Bluetooth remote programming and LCD display.
 
