@@ -111,6 +111,7 @@ Reference circuit schematic provided in the course specification.
 
 **University:** Federal University of Technology - Paraná (UTFPR)  
 **Course:** Microcontroller Systems (EL83E)  
+**Program:** Technology in Telecommunication Systems  
 **Year:** 2019  
 **Circuit Schematic & LCD Layout:** Prof. Sergio Moribe (UTFPR)  
 **LCD Driver:** lcd_Port1.c by Prof. Sergio Moribe (UTFPR)
