@@ -28,6 +28,8 @@ Developed as a final project for the Microcontroller Systems course (EL83E) at t
 | Outputs | 5 LEDs with 330Ω resistors |
 | Other | 10K potentiometer (LCD contrast) |
 
+**Toolchain:** IAR Embedded Workbench for MSP430
+
 ---
 
 ## LED Effects
