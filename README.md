@@ -13,7 +13,7 @@ Developed as a final project for the Microcontroller Systems course (EL83E) at t
 - Scheduled on/off times programmable via Bluetooth
 - Remote on/off toggle independent of scheduled times
 - Bluetooth communication via UART (9600 bps, 8N1, RFCOMM)
-- Android app integration (RoboRemoFree)
+- Android app integration (SimpleBluetoothTerminal)
 
 ---
 
@@ -44,6 +44,44 @@ Developed as a final project for the Microcontroller Systems course (EL83E) at t
 | 010 | Effect 3 - center to edges |
 | 001 | Effect 4 - edges to center |
 | 000 | Effect 5 - all effects in sequence |
+
+---
+
+## Bluetooth Configuration
+
+This project uses [SimpleBluetoothTerminal](https://github.com/kai-morich/SimpleBluetoothTerminal) for Android.
+
+### Connection
+
+1. Pair the HC-06 module with your Android device via Bluetooth settings
+2. Open SimpleBluetoothTerminal
+3. Tap the connection icon and select the HC-06 device
+4. Set line ending to **LF** in the app settings
+
+### Protocol
+
+The firmware communicates via UART at 9600 bps, 8N1.
+
+**Commands sent to the firmware:**
+
+| Command | Description |
+|---|---|
+| `B\n` | Toggle effect on/off |
+| `H XX\n` | Set hour (e.g. `H 09\n`) |
+| `M XX\n` | Set minute (e.g. `M 30\n`) |
+
+**Messages received from the firmware:**
+
+| Message | Description |
+|---|---|
+| `S EFFECT: n\n` | Active effect number (1–5) |
+| `S SET CURRENT TIME\n` | Firmware entered set current time mode |
+| `S SET TURN-ON TIME\n` | Firmware entered set turn-on time mode |
+| `S SET TURN-OFF TIME\n` | Firmware entered set turn-off time mode |
+| `N 0\n` | Effect toggled off |
+| `N 1\n` | Effect toggled on |
+| `A 0\n` | Effect activation state off |
+| `A 1\n` | Effect activation state on |
 
 ---
 
