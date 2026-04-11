@@ -95,6 +95,8 @@ Reference layout provided in the course specification.
 
 ## Circuit Schematic
 
+Reference circuit schematic provided in the course specification.
+
 ![Circuit Schematic](docs/schematic.png)
 
 ---
